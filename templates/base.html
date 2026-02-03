@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Phoenix Technico - IT Solutions</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+
+<style>
+
+/* ✅ FIX FOR NAVBAR OVERLAP — IMPORTANT */
+body{
+  padding-top: 90px;   /* pushes all pages below navbar */
+}
+
+/* PRODUCT SECTION */
+.product-title{
+  font-size: 26px;
+  font-weight: 800;
+  color: #0b1c2d;
+  margin-bottom: 15px;
+}
+
+.product-img{
+  width: 100%;
+  max-width: 420px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.product-info{
+  background: #f1f5ff;
+  padding: 20px;
+  border-left: 5px solid #0b1c2d;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+/* MENU LINKS DEFAULT */
+.navbar-dark .navbar-nav .nav-link{
+  color: #e6e9ef;        /* dark white */
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  padding: 6px 12px;
+  border-radius: 6px;
+}
+
+/* HOVER EFFECT */
+.navbar-dark .navbar-nav .nav-link:hover{
+  background: #0b1c2d;   /* dark navy */
+  color: white;
+}
+
+/* SELECTED (ACTIVE) MENU - STAYS BLACK UNTIL CHANGE */
+.navbar-dark .navbar-nav .nav-link.active{
+  background: #000000;   /* PURE DARK BLACK */
+  color: white !important;
+  border-radius: 6px;
+}
+
+/* NAVBAR */
+.navbar{
+  position: fixed;
+  width:100%;
+  top:0;
+  z-index:1000;
+}
+
+/* BRAND (LOGO + NAME) */
+.navbar-brand{
+  display: flex;
+  align-items: center;
+}
+
+/* COMPANY NAME - TECH FONT */
+.company-name{
+  font-family: 'Orbitron', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  color: white;
+}
+
+/* TAGLINE - DIFFERENT FONT + SMALL */
+.tagline{
+  font-family: 'Poppins', sans-serif;
+  font-size: 10px;
+  color: #a8c7ff;
+  letter-spacing: 0.3px;
+  line-height: 1.1;
+}
+
+/* HERO SECTION */
+.hero{
+  height: 60vh;
+  background: linear-gradient(135deg, #0b1c2d, #0f2a44);
+  position:relative;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:white;
+  margin-top:10px;   /* small gap after navbar */
+}
+
+/* GLASS BOX */
+.glass-box{
+  background: rgba(18, 52, 92, 0.35);   /* dark sky blue glass */
+  backdrop-filter: blur(12px);
+  padding:35px 45px;
+  border-radius:20px;
+  box-shadow: 0 15px 50px rgba(0,0,0,0.30);
+  animation: fadeUp 1.2s ease-out;
+  border: 1px solid rgba(168,199,255,0.35);
+}
+
+/* FADE-UP ANIMATION */
+@keyframes fadeUp{
+  from{opacity:0; transform:translateY(25px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+/* FLOATING WATER DROPS / DIAMONDS */
+.drop{
+  position:absolute;
+  background: rgba(255,255,255,0.18);
+  backdrop-filter: blur(6px);
+  border-radius: 60% 40% 60% 40%;
+  box-shadow: inset 0 0 20px rgba(255,255,255,0.5),
+              0 0 25px rgba(255,255,255,0.3);
+  animation: float 8s infinite ease-in-out;
+}
+
+/* Different sizes */
+.d1{ width:70px; height:80px; left:8%; top:15%; animation-duration:7s;}
+.d2{ width:55px; height:65px; left:75%; top:18%; animation-duration:9s;}
+.d3{ width:85px; height:95px; left:55%; top:55%; animation-duration:6s;}
+.d4{ width:45px; height:55px; left:18%; top:65%; animation-duration:8s;}
+.d5{ width:65px; height:75px; left:82%; top:50%; animation-duration:10s;}
+
+@keyframes float{
+  0%{ transform: translateY(0) scale(1); }
+  50%{ transform: translateY(-30px) scale(1.04); }
+  100%{ transform: translateY(0) scale(1); }
+}
+
+/* FOOTER */
+footer{
+  background:#0b1c2d;
+  color:white;
+  text-align:center;
+  padding:15px;
+}
+
+/* -------- SCROLLING TICKER -------- */
+
+.ticker-wrapper{
+  width: 100%;
+  overflow: hidden;
+  background: #0b1c2d;  /* dark navy */
+  padding: 12px 0;
+}
+
+.ticker{
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll 25s linear infinite;
+}
+
+.ticker span{
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.1px;
+  word-spacing: 18px;
+}
+
+@keyframes scroll{
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.rotating-cctv {
+  transition: transform 1.5s ease-in-out;
+  animation: rotateCCTV 3s infinite linear;
+}
+
+@keyframes rotateCCTV {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(10deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.lens-zoom {
+  animation: lensZoom 2.5s infinite ease-in-out;
+}
+
+@keyframes lensZoom {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<div class="container">
+
+  <a class="navbar-brand" href="/">
+    <img src="{{ url_for('static', filename='images/logo.webp') }}"
+         height="50" alt="Phoenix Technico Logo">
+
+    <div class="ms-2">
+      <div class="company-name">Phoenix Technico</div>
+      <div class="tagline">Complete IT Ecosystem</div>
+    </div>
+  </a>
+
+  <div class="collapse navbar-collapse">
+   <ul class="navbar-nav ms-auto">
+
+  <li class="nav-item">
+    <a class="nav-link {% if request.path == '/' %}active{% endif %}" href="/">Home</a>
+  </li>
+
+  <li class="nav-item">
+    <a class="nav-link {% if request.path == '/about' %}active{% endif %}" href="/about">About</a>
+  </li>
+
+  <li class="nav-item">
+    <a class="nav-link {% if request.path == '/services' %}active{% endif %}" href="/services">Services</a>
+  </li>
+
+  <li class="nav-item">
+    <a class="nav-link {% if request.path == '/careers'%}active{% endif %}" href="/careers">Careers</a>
+  </li>
+
+  <li class="nav-item">
+    <a class="nav-link {% if request.path == '/contact' %}active{% endif %}" href="/contact">Contact</a>
+  </li>
+
+</ul>
+</div>
+
+</div>
+</nav>
+
+{% block content %}{% endblock %}
+
+<footer>
+© 2026 Phoenix Technico | All Rights Reserved
+</footer>
+
+</body>
+</html>

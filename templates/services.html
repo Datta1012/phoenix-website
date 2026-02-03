@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container my-5">
+
+<style>
+/* Center heading */
+.services-header{
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+/* Make all service links clearly clickable */
+.service-link{
+  color: #0d6efd;   /* Bootstrap blue */
+  font-weight: 700;
+}
+
+.service-link:hover{
+  color: #084298;   /* darker blue on hover */
+  text-decoration: underline;
+}
+
+/* Intro text styling */
+.services-intro{
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 40px auto;
+  font-size: 17px;
+  line-height: 1.7;
+}
+</style>
+
+<h2 class="services-header">Our Services</h2>
+
+<div class="services-intro">
+<p>
+At Phoenix Technico, we deliver end-to-end technology solutions designed to enhance security, connectivity, and operational efficiency.  
+Our services integrate modern hardware, intelligent software, and smart surveillance to create reliable digital environments.  
+We focus on quality, scalability, and long-term support for businesses, institutions, and individuals.  
+Every solution is customized to meet real-world requirements with industry best practices.  
+From installation to maintenance, we ensure seamless performance and expert technical assistance.  
+Phoenix Technico stands for trust, innovation, and excellence in IT infrastructure and security systems.
+</p>
+</div>
+
+<div class="row">
+
+  <div class="col-md-4 mb-4">
+    <h4>
+      <a href="/services/fire-detection" class="service-link text-decoration-none">
+        Fire Detection Systems
+      </a>
+    </h4>
+    <p>Smart fire detection solutions for safety.</p>
+  </div>
+
+  <div class="col-md-4 mb-4">
+    <h4>
+      <a href="/services/cctv" class="service-link text-decoration-none">
+        CCTV Surveillance
+      </a>
+    </h4>
+    <p>High-definition monitoring systems.</p>
+  </div>
+
+  <div class="col-md-4 mb-4">
+    <h4>
+      <a href="/services/access-control" class="service-link text-decoration-none">
+        Access Control
+      </a>
+    </h4>
+    <p>Secure entry systems for offices.</p>
+  </div>
+
+  <div class="col-md-4 mb-4">
+    <h4>
+      <a href="/services/networking" class="service-link text-decoration-none">
+        Networking
+      </a>
+    </h4>
+    <p>Structured cabling and Wi-Fi systems.</p>
+  </div>
+
+  <div class="col-md-4 mb-4">
+    <h4>
+      <a href="/services/it-infrastructure" class="service-link text-decoration-none">
+        IT Infrastructure
+      </a>
+    </h4>
+    <p>Server, hardware & cloud setup.</p>
+  </div>
+
+   <div class="col-md-4 mb-4">
+    <h4>
+      <a href="/services/computer-hardware" class="service-link text-decoration-none">
+        Computer Hardware
+      </a>
+    </h4>
+    <p>All essential computer hardware components.</p>
+  </div>
+
+</div>
+</div>
+{% endblock %}

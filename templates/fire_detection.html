@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container my-5">
+
+<h2 class="mb-4">Fire Detection Systems</h2>
+
+<div class="row align-items-center">
+
+  <!-- LEFT SIDE: IMAGE -->
+  <div class="col-md-6 mb-4">
+    <img src="{{ url_for('static', filename='images/fire.jfif') }}"
+         class="product-img"
+         alt="Fire Detection System">
+  </div>
+
+  <!-- RIGHT SIDE: INTRO -->
+  <div class="col-md-6">
+    <p>
+    At <strong>Phoenix Technico</strong>, we design, install, and maintain advanced fire detection and alarm systems to protect lives, property, and critical assets. Our solutions are built using industry-standard equipment, smart sensors, and automated monitoring technologies.
+    </p>
+
+    <p>
+    Our fire detection systems are suitable for offices, industries, hospitals, schools, hotels, warehouses, and residential complexes. We ensure fast response, real-time alerts, and seamless integration with existing safety infrastructure.
+    </p>
+  </div>
+
+</div>
+
+<hr class="my-4">
+
+<h3>Key Features of Our Fire Detection Systems</h3>
+<ul>
+  <li>Early smoke and heat detection using smart sensors</li>
+  <li>Automatic alarm activation and emergency alerts</li>
+  <li>Central monitoring panel with real-time status</li>
+  <li>Integration with building automation and security systems</li>
+  <li>Remote monitoring via mobile app or cloud dashboard</li>
+  <li>Battery backup to work during power failure</li>
+  <li>Regular maintenance and AMC support</li>
+</ul>
+
+<hr>
+
+<h3>Types of Fire Detection Solutions We Provide</h3>
+
+<h5>1) Conventional Fire Alarm System</h5>
+<p>
+Ideal for small offices and residential buildings. Divides the building into zones and alerts the control panel when smoke or heat is detected.
+</p>
+
+<h5>2) Addressable Fire Alarm System</h5>
+<p>
+Best for large commercial buildings, malls, hospitals, and factories. Each detector has a unique address, allowing precise identification of fire location.
+</p>
+
+<h5>3) Wireless Fire Detection System</h5>
+<p>
+Suitable for heritage buildings or places where wiring is difficult. Uses wireless sensors and central monitoring.
+</p>
+
+<hr>
+
+<h3>Our Installation Process</h3>
+<ol>
+  <li>Site inspection and risk assessment</li>
+  <li>System design as per safety standards</li>
+  <li>Professional installation by certified technicians</li>
+  <li>Testing and calibration</li>
+  <li>User training and handover</li>
+  <li>Annual maintenance and support</li>
+</ol>
+
+<hr>
+
+<h3>Why Choose Phoenix Technico?</h3>
+<ul>
+  <li>Certified professionals and quality equipment</li>
+  <li>Custom safety solutions for every building</li>
+  <li>24/7 support and maintenance services</li>
+  <li>Affordable pricing with reliable performance</li>
+</ul>
+
+<div class="text-center mt-4">
+<h4 class="fw-bold">Stay Safe. Stay Protected with Phoenix Technico.</h4>
+</div>
+
+</div>
+
+{% endblock %}

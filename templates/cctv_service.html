@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container my-5">
+
+<h2 class="mb-4">CCTV Surveillance Systems</h2>
+
+<div class="row align-items-center">
+
+  <!-- LEFT SIDE: IMAGE -->
+  <div class="col-md-6 mb-4 text-center">
+  <img src="{{ url_for('static', filename='images/cctv.jfif') }}"
+       class="lens-zoom"
+       alt="CCTV Surveillance System"
+       width="350">
+</div>
+
+
+  <!-- RIGHT SIDE: INTRO -->
+  <div class="col-md-6">
+    <p>
+    At <strong>Phoenix Technico</strong>, we provide advanced CCTV surveillance solutions designed to secure homes, offices, industries, schools, hospitals, and commercial spaces. Our systems ensure continuous monitoring, real-time alerts, and high-definition video recording for maximum safety.
+    </p>
+
+    <p>
+    Our CCTV solutions are reliable, scalable, and smart — allowing you to monitor your premises from anywhere in the world through mobile apps and cloud platforms.
+    </p>
+  </div>
+
+</div>
+
+<hr class="my-4">
+
+<h3>Key Features of Our CCTV Systems</h3>
+<ul>
+  <li>High-definition (HD & 4K) video recording</li>
+  <li>Night vision with infrared (IR) cameras</li>
+  <li>Motion detection with smart alerts</li>
+  <li>Remote viewing via mobile and desktop</li>
+  <li>Cloud and local storage options</li>
+  <li>Weatherproof outdoor cameras</li>
+  <li>Real-time monitoring and playback</li>
+  <li>Battery backup support</li>
+</ul>
+
+<hr>
+
+<h3>Types of CCTV Cameras We Provide</h3>
+
+<h5>1) Dome Cameras</h5>
+<p>
+Best for indoor use in offices, malls, and banks. Discreet design with wide-angle coverage.
+</p>
+
+<h5>2) Bullet Cameras</h5>
+<p>
+Ideal for outdoor areas like parking lots, entrances, and streets. Weatherproof and durable.
+</p>
+
+<h5>3) PTZ Cameras</h5>
+<p>
+Pan-Tilt-Zoom cameras allow remote movement and zoom control for large areas.
+</p>
+
+<h5>4) IP Cameras</h5>
+<p>
+Smart internet-enabled cameras with cloud storage and remote access.
+</p>
+
+<hr>
+
+<h3>Our Installation Process</h3>
+<ol>
+  <li>Site survey and security assessment</li>
+  <li>Camera placement planning</li>
+  <li>Professional installation and wiring</li>
+  <li>DVR/NVR setup and configuration</li>
+  <li>Mobile app setup for remote access</li>
+  <li>Training and handover to client</li>
+  <li>Annual maintenance support</li>
+</ol>
+
+<hr>
+
+<h3>Why Choose Phoenix Technico?</h3>
+<ul>
+  <li>Certified technicians</li>
+  <li>Branded and high-quality cameras</li>
+  <li>24/7 technical support</li>
+  <li>Custom solutions based on your needs</li>
+  <li>Affordable pricing with warranty</li>
+</ul>
+
+<div class="text-center mt-4">
+<h4 class="fw-bold">Secure Today. Stay Protected Tomorrow.</h4>
+</div>
+
+</div>
+
+{% endblock %}

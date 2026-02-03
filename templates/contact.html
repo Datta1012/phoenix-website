@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<style>
+.contact-card{
+    background:#f2f7fb;
+    border-radius:20px;
+    padding:30px;
+    box-shadow:0px 4px 10px rgba(0,0,0,0.1);
+}
+.icon{
+    font-size:28px;
+    color:#0d6efd;
+}
+.line{
+    border-bottom:1px solid #ccc;
+    margin:10px 0 20px 0;
+}
+.map-box{
+    margin-top:40px;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0px 4px 10px rgba(0,0,0,0.1);
+}
+</style>
+
+<div class="container my-5">
+
+<h2 class="text-center mb-3">Contact Us</h2>
+
+<p class="text-center mb-4">
+We’d love to hear from you! Whether you have a question about our products,  
+services, pricing, or support — our team is ready to assist you.
+</p>
+
+<div class="contact-card">
+
+<div class="row">
+
+<div class="col-md-6 mb-4">
+<h5><span class="icon">📍</span> Office Address</h5>
+<p>
+<b>Phoenix Technico</b><br>
+Sr.No-78/3/1, Plot No. 94, Swaraj Colony,  
+Shri Gajanan Maharaj Nagar, Dighi,  
+Pune, Maharashtra 411015  
+</p>
+<div class="line"></div>
+</div>
+
+<div class="col-md-6 mb-4">
+<h5><span class="icon">📞</span> Phone Number</h5>
+<p>
++91 8605895001 <br>
+<small>(Available Mon–Sat, 10:00 AM – 7:00 PM IST)</small>
+</p>
+<div class="line"></div>
+</div>
+
+<div class="col-md-6 mb-4">
+<h5><span class="icon">📧</span> Email Address</h5>
+<p>
+phoenixtechnico@gmail.com <br>
+<small>For inquiries, support, and business collaboration.</small>
+</p>
+<div class="line"></div>
+</div>
+
+<div class="col-md-6 mb-4">
+<h5><span class="icon">🌐</span> Website</h5>
+<p>
+https://phoenixtechnico.wordpress.com/
+</p>
+<div class="line"></div>
+</div>
+
+<div class="col-md-12 mb-4">
+<h5><span class="icon">🕒</span> Business Hours</h5>
+<p>
+Monday to Saturday: 10:00 AM – 7:00 PM <br>
+Sunday: Closed  
+</p>
+</div>
+
+</div>
+</div>
+
+<!-- GOOGLE LOCATION MAP -->
+<div class="map-box">
+<iframe 
+src="https://www.google.com/maps?q=Sr.No-78/3/1,%20Plot%20No.%2094,%20Swaraj%20Colony,%20Shri%20Gajanan%20Maharaj%20Nagar,%20Dighi,%20Pune,%20411015&output=embed"
+width="100%" 
+height="450" 
+style="border:0;" 
+allowfullscreen="" 
+loading="lazy">
+</iframe>
+</div>
+
+</div>
+{% endblock %}

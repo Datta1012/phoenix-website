@@ -1,0 +1,302 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="hero">
+
+  <!-- Floating transparent drops -->
+  <div class="drop d1"></div>
+  <div class="drop d2"></div>
+  <div class="drop d3"></div>
+  <div class="drop d4"></div>
+  <div class="drop d5"></div>
+
+  <div class="glass-box">
+    <h1>End-to-End Technology Solutions</h1>
+    <h4>Hardware Foundations to Software Excellence</h4>
+    <a href="/services" class="btn btn-light mt-3">Explore Services</a>
+  </div>
+
+</div>
+
+<!-- ✅ SCROLLING PRODUCT STRIP START -->
+<div class="ticker-wrapper">
+  <div class="ticker">
+    <span>
+      Desktop Computers • Laptops And Notebooks • Processors (CPUs) • Motherboards • 
+      Graphics Cards (GPUs) • Storage Drives (HDDs & SSDs) • Keyboards & Mice • 
+      Networking Devices • Peripherals & Accessories • CCTV Cameras • 
+      Desktop Computers • Laptops And Notebooks • Processors (CPUs) • Motherboards • 
+      Graphics Cards (GPUs) • Storage Drives (HDDs & SSDs) • Keyboards & Mice • 
+      Networking Devices • Peripherals & Accessories • CCTV Cameras
+    </span>
+  </div>
+</div>
+<!-- ✅ SCROLLING PRODUCT STRIP END -->
+
+<!-- ✅ NEW PRODUCT SHOWCASE SECTION -->
+ <!-- WHAT WE OFFER TITLE -->
+<div class="container text-center my-5">
+  <h2 style="color:#0d6efd; font-weight:700;">
+    What We Offer..?
+  </h2>
+  <p class="mt-3 text-muted">
+    We provide complete IT hardware, networking, and security solutions for businesses and individuals,  
+    ensuring reliability, performance, and modern technology integration.
+  </p>
+</div>
+<!-- END WHAT WE OFFER -->
+
+<div class="container my-5">
+  <div class="row align-items-center">
+
+    <!-- LEFT SIDE: TITLE + IMAGE -->
+    <div class="col-md-6">
+      <h2 class="product-title">Desktop Computers</h2>
+
+      <img src="{{ url_for('static', filename='images/computer-desktop.png') }}"
+           class="product-img"
+           alt="Desktop Computers">
+    </div>
+
+    <!-- RIGHT SIDE: DESCRIPTION -->
+    <div class="col-md-6">
+      <div class="product-info">
+        <p>
+        Pre-built systems ideal for home, office, or gaming use.  
+        Available in a range of configurations from entry-level to high performance.
+        </p>
+      </div>
+    </div>
+
+
+    <!-- PRODUCT ROW : Laptops & Notebooks -->
+<div class="container my-5">
+  <div class="row align-items-center">
+
+    <!-- LEFT SIDE: DESCRIPTION -->
+    <div class="col-md-6">
+      <div class="product-info">
+        <p>
+        Portable computers suitable for students, professionals, and gamers.  
+        Includes models with Intel, AMD, and Apple M-series processors.
+        </p>
+      </div>
+    </div>
+
+    <!-- RIGHT SIDE: TITLE + IMAGE -->
+    <div class="col-md-6 text-end">
+      <h2 class="product-title">Laptops And Notebooks</h2>
+
+      <img src="{{ url_for('static', filename='images/laptop.png') }}"
+           class="product-img"
+           alt="Laptops And Notebooks">
+    </div>
+
+  </div>
+</div>
+
+
+<!-- LEFT SIDE: TITLE + IMAGE -->
+    <div class="col-md-6">
+      <h2 class="product-title">Processors (CPUs)</h2>
+
+      <img src="{{ url_for('static', filename='images/processor.png') }}"
+           class="product-img"
+           alt="Processors">
+    </div>
+
+    <!-- RIGHT SIDE: DESCRIPTION -->
+    <div class="col-md-6">
+      <div class="product-info">
+        <p>
+        The brain of your computer. Choose from Intel Core i3/i5/i7/i9 or  
+        AMD Ryzen 3/5/7/9 for smooth multitasking and high performance.
+        </p>
+      </div>
+    </div>
+
+    <!-- LEFT SIDE: DESCRIPTION -->
+    <div class="col-md-6">
+      <div class="product-info">
+        <p>
+        Core component connecting all hardware. Supports various chipsets, RAM capacities, 
+        and expansion ports for Intel and AMD processors.
+        </p>
+      </div>
+    </div>
+
+    <!-- RIGHT SIDE: TITLE + IMAGE -->
+    <div class="col-md-6 text-end">
+      <h2 class="product-title">Motherboard</h2>
+
+      <img src="{{ url_for('static', filename='images/motherboards.png') }}"
+           class="product-img"
+           alt="Motherboard">
+    </div>
+
+
+ <!-- LEFT SIDE: TITLE + IMAGE -->
+    <div class="col-md-6">
+      <h2 class="product-title">Graphics Cards (GPUs)</h2>
+
+      <img src="{{ url_for('static', filename='images/gpu.png') }}"
+           class="product-img"
+           alt="Graphics Card">
+    </div>
+
+    <!-- RIGHT SIDE: DESCRIPTION -->
+    <div class="col-md-6">
+      <div class="product-info">
+        <p>
+        Essential for gaming, video editing, and 3D rendering.  
+        Shop NVIDIA GeForce RTX and AMD Radeon series for high-end performance.
+        </p>
+      </div>
+    </div>
+
+
+<!-- LEFT SIDE: DESCRIPTION -->
+    <div class="col-md-6">
+      <div class="product-info">
+        <p>
+        <strong>HDDs:</strong> High-capacity and affordable.<br><br>
+
+        <strong>SSDs:</strong> Faster data access and performance.  
+        Available in SATA and NVMe types.
+        </p>
+      </div>
+    </div>
+
+    <!-- RIGHT SIDE: TITLE + IMAGE -->
+    <div class="col-md-6 text-end">
+      <h2 class="product-title">Storage Drives (HDDs & SSDs)</h2>
+
+      <img src="{{ url_for('static', filename='images/storage.png') }}"
+           class="product-img"
+           alt="Storage Drives">
+    </div>
+
+
+
+<!-- LEFT SIDE: TITLE + IMAGE -->
+    <div class="col-md-6">
+      <h2 class="product-title">Keyboards & Mice</h2>
+
+      <img src="{{ url_for('static', filename='images/keyboards-mice.png') }}"
+           class="product-img"
+           alt="Keyboards and Mice">
+    </div>
+
+    <!-- RIGHT SIDE: DESCRIPTION -->
+    <div class="col-md-6">
+      <div class="product-info">
+        <p>
+        Wired and wireless options available.  
+        Mechanical, membrane, ergonomic, and RGB backlit choices for comfort and performance.
+        </p>
+      </div>
+    </div>
+
+
+<!-- LEFT SIDE: DESCRIPTION -->
+    <div class="col-md-6">
+      <div class="product-info">
+        <p>
+        Includes routers, switches, LAN cards, and Wi-Fi adapters for fast and secure connectivity.
+        </p>
+      </div>
+    </div>
+
+    <!-- RIGHT SIDE: TITLE + IMAGE -->
+    <div class="col-md-6 text-end">
+      <h2 class="product-title">Networking Devices</h2>
+
+      <img src="{{ url_for('static', filename='images/networking-devices.png') }}"
+           class="product-img"
+           alt="Networking Devices">
+    </div>
+
+
+<!-- LEFT SIDE: TITLE + IMAGE -->
+    <div class="col-md-6">
+      <h2 class="product-title">Peripherals & Accessories</h2>
+
+      <img src="{{ url_for('static', filename='images/peripherals.png') }}"
+           class="product-img"
+           alt="Peripherals and Accessories">
+    </div>
+
+    <!-- RIGHT SIDE: DESCRIPTION -->
+    <div class="col-md-6">
+      <div class="product-info">
+        <p>
+        Includes printers, webcams, UPS, external storage, card readers, and cable organizers
+        for a complete and organized workstation.
+        </p>
+      </div>
+    </div>
+
+
+    <!-- LEFT SIDE: DESCRIPTION -->
+    <div class="col-md-6">
+      <div class="product-info">
+        <p>
+        Secure your business, home, and assets with advanced CCTV solutions tailored
+        for every environment.
+        </p>
+      </div>
+    </div>
+
+    <!-- RIGHT SIDE: TITLE + IMAGE -->
+    <div class="col-md-6 text-end">
+      <h2 class="product-title">CCTV Camera</h2>
+
+      <img src="{{ url_for('static', filename='images/cctv.png') }}"
+           class="product-img"
+           alt="CCTV Camera">
+    </div>
+
+  </div>
+</div>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-dark text-white pt-4 pb-3">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <!-- ADDRESS SECTION -->
+      <div class="col-md-6">
+        <h5>Our Office</h5>
+        <p style="line-height:1.7;">
+          Sr.No-78/3/1, Plot No. 94,  
+          Swaraj Colony, Shri Gajanan Maharaj Nagar,  
+          Dighi, Pune, Maharashtra – 411015  
+        </p>
+      </div>
+
+      <!-- GOOGLE MAP SECTION -->
+      <div class="col-md-6">
+        <iframe
+          src="https://www.google.com/maps?q=Sr.No-78/3/1%20Plot%20No.%2094%20Swaraj%20Colony%20Shri%20Gajanan%20Maharaj%20Nagar%20Dighi%20Pune%20411015&output=embed"
+          width="100%"
+          height="220"
+          style="border:0; border-radius:10px;"
+          allowfullscreen=""
+          loading="lazy">
+        </iframe>
+      </div>
+
+    </div>
+
+    <hr class="bg-light">
+
+    
+  </div>
+</footer>
+
+<!-- ✅ END PRODUCT SECTION -->
+
+
+
+{% endblock %}
