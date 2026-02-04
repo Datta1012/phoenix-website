@@ -1,5 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for
 from flask_mail import Mail, Message
+from werkzeug.utils import secure_filename
+
 import os
 import time
 
@@ -9,20 +11,18 @@ app = Flask(__name__)
 # EMAIL CONFIGURATION
 # ==========================
 
+# -------- EMAIL CONFIGURATION (GMAIL) --------
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_TLS'] = True
-
-# 👉 IMPORTANT — replace with YOUR Gmail + App Password
 app.config['MAIL_USERNAME'] = 'dat.tambe1012@gmail.com'
 app.config['MAIL_PASSWORD'] = 'nyrc hzdf hsdu olzb'
 
 mail = Mail(app)
 
-# Folder to store uploaded resumes
-UPLOAD_FOLDER = "static/uploads"
-app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+UPLOAD_FOLDER = "uploads"
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
+
 
 # ==========================
 # EXISTING ROUTES (UNCHANGED)
@@ -82,20 +82,19 @@ def apply():
 
 @app.route("/submit_application", methods=["POST"])
 def submit_application():
-    name = request.form['name']
-    phone = request.form['phone']
-    email = request.form['email']
-    position = request.form['position']
-    resume = request.files['resume']
+    name = request.form["name"]
+    email = request.form["email"]
+    phone = request.form["phone"]
+    position = request.form["position"] 
+    resume = request.files["resume"]
 
-    # Save resume
-    resume_path = os.path.join(app.config['UPLOAD_FOLDER'], resume.filename)
-    resume.save(resume_path)
+    filename = secure_filename(resume.filename)
+    filepath = os.path.join(UPLOAD_FOLDER, filename)
+    resume.save(filepath)
 
-    # Prepare email
     msg = Message(
-        subject=f"New Job Application - {position}",
-        sender=app.config['MAIL_USERNAME'],
+        subject="New Job Application",
+        sender=email,
         recipients=["dat.tambe1012@gmail.com"]
     )
 
@@ -103,18 +102,19 @@ def submit_application():
     New Job Application Received:
 
     Name: {name}
-    Phone: {phone}
     Email: {email}
-    Position Applied: {position}
+    Phone: {phone}
+    Applied For: {position}
     """
 
-    # Attach resume
-    with app.open_resource(resume_path) as fp:
-        msg.attach(resume.filename, "application/pdf", fp.read())
+    # ✅ THIS LINE ATTACHES THE RESUME
+    with app.open_resource(filepath) as fp:
+        msg.attach(filename, "application/pdf", fp.read())
 
     mail.send(msg)
 
     return render_template("success.html")
+
 
 # ==========================
 # RUN APP
