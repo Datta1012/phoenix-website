@@ -96,7 +96,7 @@ def submit_application():
     msg = Message(
         subject=f"New Job Application - {position}",
         sender=app.config['MAIL_USERNAME'],
-        recipients=["phoenixtechnico@gmail.com"]
+        recipients=["dat.tambe1012@gmail.com"]
     )
 
     msg.body = f"""
